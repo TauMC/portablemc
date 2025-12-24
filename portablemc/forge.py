@@ -508,7 +508,7 @@ def _request_neoforge_version(game_version: str) -> Optional[str]:
         url = "https://maven.neoforged.net/api/maven/latest/version/releases/net%2Fneoforged%2Fforge?filter=1.20.1-"
     else:
         # Just keep major and minor version number and construct the neoforge version prefix.
-        filter_version = ".".join(game_version_parts[1:3])
+        filter_version = ".".join(game_version_parts[1:3]) + "."
         url = f"https://maven.neoforged.net/api/maven/latest/version/releases/net%2Fneoforged%2Fneoforge?filter={url_parse.quote(filter_version)}"
 
     try:
