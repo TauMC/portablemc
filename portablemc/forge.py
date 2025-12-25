@@ -315,6 +315,7 @@ class ForgeVersion(Version):
         # Additional missing variables, the version's jar file is the same as the vanilla
         # one, so we use its path.
         info.variables["SIDE"] = "client"
+        info.variables["ROOT"] = str(self.context.main_dir.absolute())
         info.variables["MINECRAFT_JAR"] = str(self._jar_path.absolute())
 
         def replace_install_args(txt: str) -> str:

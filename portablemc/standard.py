@@ -56,6 +56,7 @@ class Context:
         """
 
         main_dir = get_minecraft_dir() if main_dir is None else main_dir
+        self.main_dir = main_dir
         self.work_dir = main_dir if work_dir is None else work_dir
         self.versions_dir = main_dir / "versions"
         self.assets_dir = main_dir / "assets"
